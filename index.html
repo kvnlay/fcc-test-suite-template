@@ -10,53 +10,84 @@
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 <!-- Hello World, We're the programmers!! -->
 <nav id="navbar">
-  
+  <header>Javascript</header>
+  <ul>
+    <a href="#Introduction" class="nav-link"><li>Introduction</li></a>
+    <a href="#What_you_should_already_know" class="nav-link"><li>What you should already know</li></a>
+    <a href="#Function_declarations" class="nav-link"><li>Function declarations</li></a>
+    <a href="#Hello_world" class="nav-link"><li>Hello world</li></a>
+    <a href="#Variables" class="nav-link"><li>Variables</li></a>
+    <a href="#Variable_scope" class="nav-link"><li>Variable scope</li></a>
+  </ul>
 </nav>
 <main id="main-doc">
 <section class="main-section" id="Introduction">
-  <header></header>
-  <p></p>
+  <header>Introduction</header>
+  <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+  
+
   <ul>
-    <li></li>
-    <li></li>
+    <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+    <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
   </ul>
 </section>
 <section class="main-section" id="What_you_should_already_know">
-  <header></header>
-  <p></p>
-  <p></p>
+  <header>What you should already know</header>
+  <p>This guide assumes you have the following basic background:</p>
+
   <ul>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+    <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+    <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
   </ul>
 </section>
 <section class="main-section" id="Function_declarations">
-  <header></header>
-  <p></p>
-  <p></p>
-  <p></p>
-  <code></code>
-  <code></code>
+  <header>Function declarations</header>
+  <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+  <ul>
+    <li>The name of the function.</li>
+    <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+    <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+  </ul>
+  <p>For example, the following code defines a simple function named square:</p>
+  <code><pre>function square(number) {
+    return number * number;
+  }</pre></code>
+
+  <p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.</p>
+  <code><pre>return number * number;</pre></code>
+  <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
 </section>
 <section class="main-section" id="Hello_world">
-  <header></header>
-  <p></p>
-  <code></code>
-  <p></p>
+  <header>Hello world</header>
+  <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+
+  <code><pre>function greetMe(yourName) {
+  alert("Hello " + yourName);
+}
+greetMe("World");</pre></code>
+  <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
 </section>
 <section class="main-section" id="Variables">
-  <header></header>
-  <p></p>
-  <p></p>
-  <p></p>
+  <header>Variables</header>
+  <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+  <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+  <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
 </section>
-<section class="main-section" id="Variable_scopes">
-  <p></p>
-  <p></p>
-  <p></p>
-  <code></code>
-  <code></code>
+<section class="main-section" id="Variable_scope">
+  <header>Variable scope</header>
+  <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+  <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+  <code><pre>if (true) {
+    var x = 5;
+  }
+  console.log(x);  // 5</pre></code>
+  <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+  <code><pre>if (true) {
+    let y = 5;
+  }
+  console.log(y);  
+  // ReferenceError: y is not defined</pre></code>
 </section>
 </main>
     <script  src="js/index.js"></script>
